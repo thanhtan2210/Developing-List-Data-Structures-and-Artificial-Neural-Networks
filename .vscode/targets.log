@@ -9,7 +9,7 @@ make: *** No rule to make target 'd:\Bon Bon\project 1\git\Developing-List-Data-
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Sep 12 09:49:26 2024
+# Make data base, printed on Fri Sep 13 07:51:29 2024
 
 # Variables
 
@@ -40,7 +40,7 @@ GOPATH = C:\Users\BonBon\go
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_18868_OMGICDUUDRZDNVQM
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_44332_JTKEJBTHIMXYHWVQ
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
@@ -90,7 +90,7 @@ MAKEFILE_LIST :=
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 18868
+VSCODE_PID = 44332
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # automatic
@@ -262,6 +262,6 @@ d:\Bon Bon\project 1\git\Developing-List-Data-Structures-and-Artificial-Neural-N
 # strcache performance: lookups = 8 / hit rate = 25%
 # hash-table stats:
 # Load=6/8192=0%, Rehash=0, Collisions=0/8=0%
-# Finished Make data base on Thu Sep 12 09:49:26 2024
+# Finished Make data base on Fri Sep 13 07:51:29 2024
 
  
