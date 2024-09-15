@@ -11,12 +11,11 @@ make: *** No rule to make target 'd:\Bon Bon\project 1\git\Developing-List-Data-
 # There is NO WARRANTY, to the extent permitted by law.
  
 
-# Make data base, printed on Sun Sep 15 11:31:01 2024
+# Make data base, printed on Sun Sep 15 17:57:53 2024
 
 # Variables
 
 # environment
- 
 SYSTEMDRIVE = C:
 # environment
 LC_ALL = C
@@ -43,12 +42,13 @@ GOPATH = C:\Users\BonBon\go
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_9132_AQCAWNAVDJKKGHOP
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_5300_LWYUZAUSEQBZBYUK
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
 .VARIABLES := 
 # automatic
+ 
 %D = $(patsubst %/,%,$(dir $%))
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
@@ -58,8 +58,6 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 VSCODE_CODE_CACHE_PATH = C:\Users\BonBon\AppData\Roaming\Code\CachedData\38c31bc77e0dd6ae88a4e9cc93428cc27a56ba40
 # environment
 LANG = C
-# environment
-LATEXWORKSHOP_DOCKER_LATEX = 
 # default
 .LOADED := 
 # environment
@@ -69,7 +67,6 @@ TMP = /cygdrive/c/Users/BonBon/AppData/Local/Temp
 # makefile
 MAKEFLAGS = prR
 # environment
- 
 ONEDRIVE = C:\Users\BonBon\OneDrive
 # makefile
 CURDIR := /cygdrive/d/Bon Bon/project 1/git/Developing-List-Data-Structures-and-Artificial-Neural-Networks
@@ -94,7 +91,7 @@ MAKEFILE_LIST :=
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 9132
+VSCODE_PID = 5300
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # automatic
@@ -110,7 +107,6 @@ MAKE_HOST := x86_64-pc-cygwin
 # environment
 PROGRAMDATA = C:\ProgramData
 # default
- 
 SHELL := /bin/sh
 # environment
 HOMEPATH = \Users\BonBon
@@ -137,18 +133,18 @@ MAKEFILES :=
 # environment
 PROMPT = $P$G
 # environment
-LOGONSERVER = \\LAPTOP-KD5384I4
+LS_HOST_PROCESS_ARCHITECTURE = x64
 # environment
-LATEXWORKSHOP_DOCKER_PATH = docker
+LOGONSERVER = \\LAPTOP-KD5384I4
 # environment
 USERNAME = BonBon
 # environment
 COMMONPROGRAMFILES = C:\Program Files\Common Files
+ 
 # automatic
 ?F = $(notdir $?)
 # environment
 PROGRAMW6432 = C:\Program Files
- 
 # environment
 PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
 # automatic
@@ -218,7 +214,7 @@ PROCESSOR_REVISION = 9e0a
 # environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 10, GenuineIntel
 # variable set hash-table stats:
-# Load=99/1024=10%, Rehash=0, Collisions=11/119=9%
+# Load=98/1024=10%, Rehash=0, Collisions=11/118=9%
 
 # Pattern-specific Variable Values
 
@@ -242,7 +238,6 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 10, GenuineIntel
 #  File has not been updated.
 
 # Not a target:
- 
 all:
 #  Command line target.
 #  Implicit rule search has not been done.
@@ -268,8 +263,7 @@ d:\Bon Bon\project 1\git\Developing-List-Data-Structures-and-Artificial-Neural-N
 
 # strcache performance: lookups = 8 / hit rate = 25%
 # hash-table stats:
- 
 # Load=6/8192=0%, Rehash=0, Collisions=0/8=0%
-# Finished Make data base on Sun Sep 15 11:31:01 2024
+# Finished Make data base on Sun Sep 15 17:57:53 2024
 
  

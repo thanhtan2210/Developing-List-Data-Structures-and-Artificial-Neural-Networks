@@ -1,8 +1,10 @@
 make.exe -f d:\Bon Bon\project 1\git\Developing-List-Data-Structures-and-Artificial-Neural-Networks\make --dry-run --always-make --keep-going --print-directory
 make: Entering directory '/cygdrive/d/Bon Bon/project 1/git/Developing-List-Data-Structures-and-Artificial-Neural-Networks'
-make: Leaving directory '/cygdrive/d/Bon Bon/project 1/git/Developing-List-Data-Structures-and-Artificial-Neural-Networks'
  
 make: d:\Bon Bon\project 1\git\Developing-List-Data-Structures-and-Artificial-Neural-Networks\make: No such file or directory
+
 make: *** No rule to make target 'd:\Bon Bon\project 1\git\Developing-List-Data-Structures-and-Artificial-Neural-Networks\make'.
 make: Failed to remake makefile 'd:\Bon Bon\project 1\git\Developing-List-Data-Structures-and-Artificial-Neural-Networks\make'.
 
+make: Leaving directory '/cygdrive/d/Bon Bon/project 1/git/Developing-List-Data-Structures-and-Artificial-Neural-Networks'
+ 
