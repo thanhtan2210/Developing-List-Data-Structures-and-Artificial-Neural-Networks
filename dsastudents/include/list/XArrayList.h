@@ -269,24 +269,18 @@ bool XArrayList<T>::removeItem(T item, void (*removeItemData)(T))
   // TODO implement
   for (int i = 0; i < count; i++)
   {
-    if (data[i] == item)
+    if (equals(data[i], item, itemEqual))
     {
-      if (itemEqual != nullptr && itemEqual(data[i], item))
+      if (removeItemData != nullptr)
       {
-        if (removeItemData != nullptr)
-        {
-          removeItemData(data[i]);
-        }
+        removeItemData(data[i]);
       }
-      else
+      for (int j = i; j < count - 1; j++)
       {
-        for (int j = i; j < count - 1; j++)
-        {
-          data[j] = data[j + 1];
-        }
-        count--;
-        return true;
+        data[j] = data[j + 1];
       }
+      count--;
+      return true;
     }
   }
   return false;
