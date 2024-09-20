@@ -23,6 +23,7 @@ class DLinkedList : public IList<T> {
   Node *head;
   Node *tail;
   int count;
+  string s;
   bool (*itemEqual)(T &lhs, T &rhs);
   void (*deleteUserData)(DLinkedList<T> *);
 
@@ -65,7 +66,7 @@ class DLinkedList : public IList<T> {
   Iterator begin() { return Iterator(this, true); }
   Iterator end() { return Iterator(this, false); }
 
-  bbegin() { return BWDIterator(this, true); }
+  BWDIterator bbegin() { return BWDIterator(this, true); }
   BWDIterator bend() { return BWDIterator(this, false); }
 
  protected:
@@ -164,10 +165,6 @@ class DLinkedList : public IList<T> {
       return iterator;
     }
   };
-
-  class BWDIterator {
-    // TODO implement
-  };
 };
 
 template <class T>
@@ -181,6 +178,11 @@ template <class T>
 DLinkedList<T>::DLinkedList(void (*deleteUserData)(DLinkedList<T> *),
                             bool (*itemEqual)(T &, T &)) {
   // TODO implement
+  int count = 0;
+  this->deleteUserData = deleteUserData;
+  this->itemEqual = itemEqual;
+  head = nullptr;
+  tail = nullptr;
 }
 
 template <class T>

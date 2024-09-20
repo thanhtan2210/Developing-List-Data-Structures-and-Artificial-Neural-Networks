@@ -1,5 +1,6 @@
 make.exe all -f d:\Bon Bon\project 1\git\Developing-List-Data-Structures-and-Artificial-Neural-Networks\make --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: d:\Bon Bon\project 1\git\Developing-List-Data-Structures-and-Artificial-Neural-Networks\make: No such file or directory
+
 make: *** No rule to make target 'd:\Bon Bon\project 1\git\Developing-List-Data-Structures-and-Artificial-Neural-Networks\make'.  Stop.
 
 # GNU Make 4.4.1
@@ -10,7 +11,7 @@ make: *** No rule to make target 'd:\Bon Bon\project 1\git\Developing-List-Data-
 # There is NO WARRANTY, to the extent permitted by law.
  
 
-# Make data base, printed on Tue Sep 17 23:19:03 2024
+# Make data base, printed on Fri Sep 20 20:47:06 2024
 
 # Variables
 
@@ -20,6 +21,7 @@ SYSTEMDRIVE = C:
 LC_ALL = C
 # environment
 USERPROFILE = C:\Users\BonBon
+ 
 # environment
 LOCALAPPDATA = C:\Users\BonBon\AppData\Local
 # environment
@@ -41,7 +43,7 @@ GOPATH = C:\Users\BonBon\go
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_22796_DGKSGMAURPWNTCGJ
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_21152_ILNPYXMNPSBOYOGJ
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
@@ -89,7 +91,7 @@ MAKEFILE_LIST :=
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 22796
+VSCODE_PID = 21152
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # automatic
@@ -146,6 +148,7 @@ PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
 +F = $(notdir $+)
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+ 
 # environment
 MAVEN_HOME = C:\Users\FX505\New folder\apache-maven-3.6.2
 # environment
@@ -209,7 +212,6 @@ PROCESSOR_REVISION = 9e0a
 # environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 10, GenuineIntel
 # variable set hash-table stats:
- 
 # Load=97/1024=9%, Rehash=0, Collisions=11/117=9%
 
 # Pattern-specific Variable Values
@@ -260,6 +262,6 @@ d:\Bon Bon\project 1\git\Developing-List-Data-Structures-and-Artificial-Neural-N
 # strcache performance: lookups = 8 / hit rate = 25%
 # hash-table stats:
 # Load=6/8192=0%, Rehash=0, Collisions=0/8=0%
-# Finished Make data base on Tue Sep 17 23:19:03 2024
+# Finished Make data base on Fri Sep 20 20:47:06 2024
 
  
