@@ -1,25 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/*
- * File:   Point.h
- * Author: LTSACH
- *
- * Created on 19 August 2020, 21:03
- */
-
 #ifndef POINT_H
 #define POINT_H
 
-#include <math.h>
-
+#include <cmath>
 #include <iomanip>
 #include <iostream>
-#include <random>
 #include <sstream>
+#include <string>
 using namespace std;
 
 #define EPSILON (1E-8)
@@ -30,95 +16,55 @@ class Point {
   friend ostream& operator<<(ostream& os, const Point& point);
 
  public:
-  Point(float x = 0.0f, float y = 0.0f, float z = 0.0f) {
-    this->x = x;
-    this->y = y;
-    this->z = z;
-  }
-  Point(const Point& point) {
-    this->x = point.x;
-    this->y = point.y;
-    this->z = point.z;
-  }
+  Point(float x = 0.0f, float y = 0.0f, float z = 0.0f);
+  Point(const Point& point);
 
-  void setZ(float z) { this->z = z; }
+  void setX(float x);
+  float getX() const;
+  void setY(float y);
+  float getY() const;
+  void setZ(float z);
+  float getZ() const;
 
-  float getZ() const { return z; }
+  float radius() const;
 
-  void setY(float y) { this->y = y; }
+  operator float();
 
-  float getY() const { return y; }
+  bool operator==(Point rhs) const;
 
-  void setX(float x) { this->x = x; }
+  // Compare by x, y, z and radius
+  static bool pointEQ_X(Point& lhs, Point& rhs);
+  static bool pointEQ_Y(Point& lhs, Point& rhs);
+  static bool pointEQ_Z(Point& lhs, Point& rhs);
+  static bool pointEQ_Radius(Point& lhs, Point& rhs);
+  static bool pointEQ(Point& lhs, Point& rhs);
 
-  float getX() const { return x; }
-  float radius() { return sqrt(x * x + y * y + z * z); }
+  // Comparison functions for pointers
+  static bool pointEQ_X(Point*& lhs, Point*& rhs);
+  static bool pointEQ_Y(Point*& lhs, Point*& rhs);
+  static bool pointEQ_Z(Point*& lhs, Point*& rhs);
+  static bool pointEQ_Radius(Point*& lhs, Point*& rhs);
+  static bool pointEQ(Point*& lhs, Point*& rhs);
 
-  // with point object
-  bool operator==(Point rhs) {
-    return (abs(this->x - rhs.x) < EPSILON) &&
-           (abs(this->y - rhs.y) < EPSILON) && (abs(this->z - rhs.z) < EPSILON);
-  }
+  // Conversion to string
+  static string point2str_X(Point& point);
+  static string point2str_Y(Point& point);
+  static string point2str_Z(Point& point);
+  static string point2str_Radius(Point& point);
+  static string point2str(Point& point);
 
-  // with pointer to point
-  static bool pointEQ(Point& lhs, Point& rhs) { return lhs == rhs; }
+  // Conversion to string for pointers
+  static string point2str_X(Point*& point);
+  static string point2str_Y(Point*& point);
+  static string point2str_Z(Point*& point);
+  static string point2str_Radius(Point*& point);
+  static string point2str(Point*& point);
 
-  // with pointer to point
-  static bool pointEQx(Point& lhs, Point& rhs) {
-    return (abs(lhs.x - rhs.x) < EPSILON);
-  }
-
-  // with pointer to point
-  static bool pointEQ(Point*& lhs, Point*& rhs) { return *lhs == *rhs; }
-
-  static string point2float(Point& point) { return to_string(float(point)); }
-
-  static string point2str(Point& point) {
-    stringstream os;
-    os << point;
-    return os.str();
-  }
-
-  static void pointRemove(Point* point) { delete point; }
-
-  static string point2str(Point*& point) { return point2str(*point); }
-
-  operator float() { return sqrt(x * x + y * y + z * z); }
-
+  // Point operations
+  static void pointRemove(Point* point);
   static Point* genPoints(int size, float minValue = 0, float maxValue = 1,
-                          bool manualSeed = false, int seedValue = 0) {
-    Point* head = new Point[size];
-
-    std::default_random_engine* engine;
-    if (manualSeed)
-      engine = new std::default_random_engine(
-          static_cast<long unsigned int>(seedValue));
-    else
-      engine = new std::default_random_engine(
-          static_cast<long unsigned int>(time(0)));
-    uniform_real_distribution<double> dist(minValue, maxValue);
-
-    //
-    for (int idx = 0; idx < size; idx++) {
-      float x = dist(*engine);
-      float y = dist(*engine);
-      float z = dist(*engine);
-      head[idx] = Point(x, y, z);
-    }
-    delete engine;
-    return head;
-  }
-  static void println(Point* head, int size) {
-    stringstream os;
-    os << "[";
-    for (int idx = 0; idx < size - 1; idx++) os << head[idx] << ", ";
-    if (size > 0)
-      os << head[size - 1] << "]";
-    else
-      os << "]";
-    cout << os.str() << endl;
-    return;
-  }
+                          bool manualSeed = false, int seedValue = 0);
+  static void println(Point* head, int size);
 };
 
 #endif /* POINT_H */

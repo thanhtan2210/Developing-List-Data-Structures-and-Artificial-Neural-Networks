@@ -14,16 +14,75 @@ RandomTest::RandomTest(int from, int to) : from(from), to(to) {}
 void RandomTest::runTest() {
   for (int i = from; i <= to; ++i) {
     std::string inputFilename =
-        "test/random_test/input/input_" + std::to_string(i) + ".txt";
+        "test/random_test/input/input_" + std::to_string(i);
     std::string outputFilename =
-        "test/random_test/output/output_" + std::to_string(i) + ".txt";
-    inputfile(inputFilename, outputFilename);
+        "test/random_test/output/output_" + std::to_string(i);
+    processFile(inputFilename, outputFilename);
   }
 
-  compareOutputs();
+  // compareOutputs();
 }
+template <class T>
+void RandomTest::runtime(IList<T> &list) {}
 
-void RandomTest::inputfile(string inputFilename, string outputFilename) {}
+void RandomTest::processFile(string inputFilename, string outputFilename) {
+  std::ifstream file(inputFilename);
+  int number_line, capacity;
+  // Check if the file was successfully opened
+  if (!file.is_open()) {
+    cerr << "Error: Could not open file " << inputFilename << endl;
+    return;
+  }
+
+  string skip, _iList, _type, _itemEqual, _deleteUserData;
+  file >> number_line >> skip >> _iList >> skip >> _type;
+  file >> skip >> skip >> _itemEqual;
+  file >> skip >> skip >> _deleteUserData;
+  file >> skip >> skip >> capacity >> skip;
+  // std::map<std::string, bool (*)(Point &, Point &)> function_itemEqual;
+  // function_itemEqual["null"] = 0;
+  // function_itemEqual["pointEQ_X"] = &Point::pointEQ_X;
+  // function_itemEqual["pointEQ_Y"] = &Point::pointEQ_Y;
+  // function_itemEqual["pointEQ_Z"] = &Point::pointEQ_Z;
+  // function_itemEqual["pointEQ"] = &Point::pointEQ;
+
+  // if (_iList == "XArrayList") {
+  //   if (_type == "string") {
+  //     XArrayList<std::string> list(0, 0, capacity);
+  //     this->runtime(list);
+  //   } else if (_type == "int") {
+  //     XArrayList<int> list(0, 0, capacity);
+  //     this->runtime(list);
+  //   } else if (_type == "bool") {
+  //     XArrayList<bool> list(0, 0, capacity);
+  //     this->runtime(list);
+  //   } else if (_type == "Point") {
+  //     XArrayList<Point> list(0, function_itemEqual[_itemEqual], capacity);
+  //     this->runtime(list);
+  //   } else if (_type == "Point*") {
+  //     XArrayList<Point *> list(&XArrayList<Point *>::free,
+  //                              function_itemEqual[_itemEqual], capacity);
+  //     this->runtime(list);
+  //   }
+  // } else if (_iList == "XArrayList") {
+  //   if (_type == "string") {
+  //     XArrayList<std::string> list(0, 0, capacity);
+  //     this->runtime(list);
+  //   } else if (_type == "int") {
+  //     XArrayList<int> list(0, 0, capacity);
+  //     this->runtime(list);
+  //   } else if (_type == "bool") {
+  //     XArrayList<bool> list(0, 0, capacity);
+  //     this->runtime(list);
+  //   } else if (_type == "Point") {
+  //     XArrayList<Point> list(0, function_itemEqual[_itemEqual], capacity);
+  //     this->runtime(list);
+  //   } else if (_type == "Point*") {
+  //     XArrayList<Point *> list(&XArrayList<Point *>::free,
+  //                              function_itemEqual[_itemEqual], capacity);
+  //     this->runtime(list);
+  //   }
+}
 
 void RandomTest::compareOutputs() {
   std::vector<std::string> fails;

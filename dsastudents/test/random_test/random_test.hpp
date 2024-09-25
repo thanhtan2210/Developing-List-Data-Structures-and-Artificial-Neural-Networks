@@ -12,7 +12,7 @@
 
 #include "../../include/list/listheader.h"
 #include "../main.hpp"
-
+#include "util/Point.h"
 class RandomTest {
  public:
   RandomTest(int from, int to);
@@ -20,9 +20,10 @@ class RandomTest {
   void runTest();
 
  private:
-  void inputfile(string inputFilename, string outputFilename);
+  void processFile(string inputFilename, string outputFilename);
   void compareOutputs();
-
+  template <class T>
+  void runtime(IList<T> &list);
   int from;
   int to;
 
