@@ -1,16 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt
- * to change this license Click nbfs://nbhost/ /Templates/cppFiles/file.h to
- * edit this template
- */
-
-/*
- * File:   dataset.h
- * Author: ltsach
- *
- * Created on September 2, 2024, 3:59 PM
- */
-
 #ifndef DATASET_H
 #define DATASET_H
 #include "ann/xtensor_lib.h"
@@ -65,40 +52,23 @@ class TensorDataset : public Dataset<DType, LType> {
   xt::svector<unsigned long> data_shape, label_shape;
 
  public:
-  /* TensorDataset:
-   * need to initialize:
-   * 1. data, label;
-   * 2. data_shape, label_shape
-   */
   TensorDataset(xt::xarray<DType> data, xt::xarray<LType> label) {
-    /* TODO: your code is here for the initialization
-     */
+    // TODO implement
+    this->data = data;
+    this->label = label;
   }
-  /* len():
-   *  return the size of dimension 0
-   */
+
   int len() {
-    /* TODO: your code is here to return the dataset's length
-     */
-    return 0;  // remove it when complete
+    // TODO implement
   }
 
-  /* getitem:
-   * return the data item (of type: DataLabel) that is specified by index
-   */
   DataLabel<DType, LType> getitem(int index) {
-    /* TODO: your code is here
-     */
+    // TODO implement
   }
 
-  xt::svector<unsigned long> get_data_shape() {
-    /* TODO: your code is here to return data_shape
-     */
-  }
-  xt::svector<unsigned long> get_label_shape() {
-    /* TODO: your code is here to return label_shape
-     */
-  }
+  xt::svector<unsigned long> get_data_shape() { return data_shape; }
+
+  xt::svector<unsigned long> get_label_shape() { return label_shape; }
 };
 
 #endif /* DATASET_H */

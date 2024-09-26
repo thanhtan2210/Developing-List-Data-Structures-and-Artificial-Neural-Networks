@@ -198,7 +198,7 @@ void XArrayList<T>::add(T e)
   {
     int new_capacity = capacity * 2 + 1;
     T *new_data = new T[new_capacity];
-    for (int i = 0; i < count; i++)
+    for (int i = 0; i < capacity + 1; i++)
     {
       new_data[i] = data[i];
     }
@@ -225,7 +225,7 @@ void XArrayList<T>::add(int index, T e)
     {
       int new_capacity = capacity * 2 + 1;
       T *new_data = new T[new_capacity];
-      for (int i = 0; i < count; i++)
+      for (int i = 0; i < capacity + 1; i++)
       {
         new_data[i] = data[i];
       }

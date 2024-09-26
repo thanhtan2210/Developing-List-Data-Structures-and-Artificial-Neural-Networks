@@ -5,9 +5,14 @@
  * Author: Võ Tiến
  * Link FB : https://www.facebook.com/Shiba.Vo.Tien
  * Link Group : https://www.facebook.com/groups/khmt.ktmt.cse.bku
- * Date: 10.9.2024
+ * Date: 18.9.2024
 
- * build code : g++ -o main -Iinclude -Isrc -std=c++17 main.cpp src/util/Point.cpp  test/unit_test/arrayList/unit_test.cpp test/unit_test/linkedList/unit_test.cpp test/random_test/random_test.cpp
+ ! build code : g++ -fsanitize=address  -o main -Iinclude -Isrc -std=c++17
+ main.cpp test/unit_test/arrayList/unit_test.cpp
+                test/unit_test/linkedList/unit_test.cpp
+                test/unit_test/data/unit_test.cpp
+                test/random_test/random_test.cpp
+                src/ann/xtensor_lib.cpp src/util/Point.cpp
 
  * run code
     * terminal unit test array list
@@ -18,6 +23,10 @@
     ! ./main test_unit_linkedList
     ! ./main test_unit_linkedList nameFunctionUnitTest
 
+    * terminal unit test dataset
+    ! ./main test_unit_data
+    ! ./main test_unit_data nameFunctionUnitTest
+
     * terminal auto test
     ! ./main test_random number_1 number_2
     ! ./main test_random number
@@ -25,12 +34,13 @@
 
 #include "test/random_test/random_test.hpp"
 #include "test/unit_test/arrayList/unit_test.hpp"
+#include "test/unit_test/data/unit_test.hpp"
 #include "test/unit_test/linkedList/unit_test.hpp"
-
 void printTestCase();
 void handleTestUnitArray(int argc, char *argv[]);
 void handleTestUnitLinkedList(int argc, char *argv[]);
 void handleTestRandom(int argc, char *argv[]);
+void handleTestUnitData(int argc, char *argv[]);
 
 int main(int argc, char *argv[]) {
   if (argc <= 1) {
@@ -41,8 +51,10 @@ int main(int argc, char *argv[]) {
   std::string arg1 = argv[1];
   if (arg1 == "test_unit_array") {
     handleTestUnitArray(argc, argv);
-  } else if (arg1 == "test_unit_linkedList") {
+  } else if (arg1 == "test_unit_linkeList") {
     handleTestUnitLinkedList(argc, argv);
+  } else if (arg1 == "test_unit_data") {
+    handleTestUnitData(argc, argv);
   } else if (arg1 == "test_random") {
     handleTestRandom(argc, argv);
   } else {
@@ -66,6 +78,20 @@ void handleTestUnitArray(int argc, char *argv[]) {
 
 void handleTestUnitLinkedList(int argc, char *argv[]) {
   T_LinkedList unitTest;
+
+  if (argc == 2 || (argc == 3 && std::string(argv[2]) == "all")) {
+    std::cout << "Running all unit tests data: ----------\n";
+    unitTest.runAllTests();
+  } else if (argc == 3) {
+    std::cout << "Running unit test data: " << argv[2] << " ----------\n";
+    unitTest.runTest(argv[2]);
+  } else {
+    printTestCase();
+  }
+}
+
+void handleTestUnitData(int argc, char *argv[]) {
+  T_Data unitTest;
 
   if (argc == 2 || (argc == 3 && std::string(argv[2]) == "all")) {
     std::cout << "Running all unit tests linked list: ----------\n";
@@ -125,6 +151,11 @@ void printTestCase() {
   std::cout << RED << "./main test_unit_linkedList" << RESET << std::endl;
   std::cout << RED << "./main test_unit_linkedList nameFunctionUnitTest"
             << RESET << std::endl
+            << std::endl;
+  std::cout << GREEN << BOLD << "terminal unit test data" << RESET << std::endl;
+  std::cout << RED << "./main test_unit_data" << RESET << std::endl;
+  std::cout << RED << "./main test_unit_data nameFunctionUnitTest" << RESET
+            << std::endl
             << std::endl;
 
   std::cout << GREEN << BOLD << "terminal auto test" << RESET << std::endl;

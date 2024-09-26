@@ -771,3 +771,37 @@ bool T_ArrayList::array34() {
   //! print result
   return printResult(output.str(), expect, name);
 }
+
+bool T_ArrayList::array35() {
+  string name = "array35";
+  //! data
+  XArrayList<Point *> list(&XArrayList<Point *>::free, &Point::pointEQ, 0);
+  list.add(new Point(23.2f, 25.4f));
+  list.add(new Point(24.6f, 23.1f));
+  list.add(new Point(12.5f, 22.3f));
+  list.add(new Point(23.2f, 25.4f));
+  list.add(new Point(24.6f, 23.1f));
+  list.add(new Point(12.5f, 22.3f));
+  list.add(new Point(23.2f, 25.4f));
+  list.add(new Point(24.6f, 23.1f));
+  list.add(new Point(12.5f, 22.3f));
+  list.add(new Point(23.2f, 25.4f));
+  list.add(new Point(24.6f, 23.1f));
+  list.add(new Point(12.5f, 22.3f));
+
+  //! expect
+  string expect = "[P(12.5, 22.3, 0.0)]";
+
+  //! output
+  stringstream output;
+  output << "[";
+  for (auto it : list) {
+    output << *it << ", ";
+  }
+  output << "]";
+
+  //! remove data
+
+  //! print result
+  return printResult(output.str(), expect, name);
+}
