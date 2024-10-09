@@ -206,8 +206,8 @@ void XArrayList<T>::add(T e)
     data = new_data;
     capacity = new_capacity;
   }
-  data[count] = e;
   count++;
+  data[count - 1] = e;
   return;
 }
 
@@ -233,11 +233,11 @@ void XArrayList<T>::add(int index, T e)
       data = new_data;
       capacity = new_capacity;
     }
-    for (int i = count; i > index; i--)
+    count++;
+    for (int i = count - 1; i > index; i--)
     {
       data[i] = data[i - 1];
     }
-    count++;
     data[index] = e;
   }
 }

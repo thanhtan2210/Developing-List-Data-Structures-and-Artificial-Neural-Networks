@@ -7,12 +7,9 @@
  * Link Group : https://www.facebook.com/groups/khmt.ktmt.cse.bku
  * Date: 18.9.2024
 
- ! build code : g++ -fsanitize=address  -o main -Iinclude -Isrc -std=c++17
- main.cpp test/unit_test/arrayList/unit_test.cpp
-                test/unit_test/linkedList/unit_test.cpp
-                test/unit_test/data/unit_test.cpp
-                test/random_test/random_test.cpp
-                src/ann/xtensor_lib.cpp src/util/Point.cpp
+ ! build code : g++ -o main -Iinclude -Isrc -std=c++17 main.cpp test/unit_test/arrayList/unit_test.cpp test/unit_test/linkedList/unit_test.cpp test/random_test/random_test.cpp src/ann/xtensor_lib.cpp src/util/Point.cpp
+g++ -o main -Iinclude -Isrc -std=c++17 main.cpp test/unit_test/arrayList/unit_test.cpp test/unit_test/linkedList/unit_test.cpp test/unit_test/data/unit_test.cpp test/random_test/random_test.cpp src/ann/xtensor_lib.cpp src/util/Point.cpp
+g++ -fsanitize=address  -o main -Iinclude -Isrc -std=c++17 main.cpp test/unit_test/arrayList/unit_test.cpp test/unit_test/linkedList/unit_test.cpp test/unit_test/data/unit_test.cpp test/random_test/random_test.cpp src/ann/xtensor_lib.cpp src/util/Point.cpp
 
  * run code
     * terminal unit test array list

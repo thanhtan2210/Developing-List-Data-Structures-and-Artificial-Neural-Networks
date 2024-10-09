@@ -40,6 +40,15 @@ class T_Data {
     T_Data::registerTest("data21", &T_Data::data21);
     T_Data::registerTest("data22", &T_Data::data22);
     T_Data::registerTest("data23", &T_Data::data23);
+    T_Data::registerTest("data24", &T_Data::data24);
+    T_Data::registerTest("data25", &T_Data::data25);
+    T_Data::registerTest("data26", &T_Data::data26);
+    T_Data::registerTest("data27", &T_Data::data27);
+    T_Data::registerTest("data28", &T_Data::data28);
+    T_Data::registerTest("data29", &T_Data::data29);
+    T_Data::registerTest("data30", &T_Data::data30);
+    T_Data::registerTest("data31", &T_Data::data31);
+     T_Data::registerTest("data32", &T_Data::data32);
     // TODO unit new
   }
 
@@ -67,6 +76,15 @@ class T_Data {
   bool data21();
   bool data22();
   bool data23();
+  bool data24();
+  bool data25();
+  bool data26();
+  bool data27();
+  bool data28();
+  bool data29();
+  bool data30();
+  bool data31();
+  bool data32();
   // TODO unit new
 
  public:

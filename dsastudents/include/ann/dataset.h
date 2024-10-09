@@ -56,14 +56,32 @@ class TensorDataset : public Dataset<DType, LType> {
     // TODO implement
     this->data = data;
     this->label = label;
+    this->data_shape = data.shape();
+    this->label_shape = label.shape();
   }
 
   int len() {
     // TODO implement
+    return this->data.shape()[0];
   }
 
   DataLabel<DType, LType> getitem(int index) {
     // TODO implement
+    if(index < 0 || index >= this->len())
+    {
+      throw std::out_of_range("Index is out of range!");
+    }
+    else
+    {
+      auto a = xt::view(data, index, xt::all());
+      xt::xarray<LType> label_tmp;
+      if (label.dimension() == 0)
+      {
+        label_tmp = label;
+      }
+      else label_tmp = xt::view(label, 0, xt::all());
+      return DataLabel<DType, LType>(a, label_tmp);
+    }
   }
 
   xt::svector<unsigned long> get_data_shape() { return data_shape; }
