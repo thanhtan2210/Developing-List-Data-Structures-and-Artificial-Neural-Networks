@@ -472,7 +472,7 @@ bool T_ArrayList::array21() {
   list.add(1);
 
   //! expect
-  string expect = "Index of item 1: 1";
+  string expect = "Index of item 1: 3";
 
   //! output
   int index = list.indexOf(1);

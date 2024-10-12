@@ -59,6 +59,8 @@
   "files.associations": {
     "*.rmd": "markdown",
     "Makefile": "makefile",
-    "format": "cpp"
+    "format": "cpp",
+    "iostream": "cpp",
+    "ostream": "cpp"
   }
 }
