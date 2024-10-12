@@ -64,16 +64,12 @@ public:
         index = xt::arange<unsigned long>(ptr_dataset->len());
       // xu li droplas
       num_batch = num_samples / batch_size;
-      if (drop_last && (num_samples % batch_size > 0))
-      {
-        num_batch++;
-      }
       TensorDataset<DType, LType> *tensor_data = dynamic_cast<TensorDataset<DType, LType> *>(ptr_dataset);
       for (int batch_idx = 0; batch_idx < num_batch; batch_idx++)
       {
         xt::svector<unsigned long> data_shape = tensor_data->get_data_shape();
         xt::svector<unsigned long> label_shape = tensor_data->get_label_shape();
-        int index_start_batch = batch_idx * num_batch;
+        int index_start_batch = batch_idx * batch_size;
         int index_end_batch;
         if (!drop_last && batch_idx == num_batch - 1)
         {
@@ -83,9 +79,9 @@ public:
         }
         else
         {
-          index_end_batch = min((batch_idx + 1) * num_batch, num_samples);
-          data_shape[0] = min(batch_size, num_samples - index_end_batch + 1);
-          label_shape[0] = min(batch_size, num_samples - index_end_batch);
+          index_end_batch = min((batch_idx + 1) * batch_size, num_samples);
+          data_shape[0] = min(batch_size, num_samples - index_start_batch + 1);
+          label_shape[0] = min(batch_size, num_samples - index_start_batch + 1);
         }
 
         xt::xarray<DType> batch_data = xt::zeros<DType>(data_shape);

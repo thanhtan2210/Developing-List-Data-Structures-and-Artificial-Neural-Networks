@@ -1029,7 +1029,14 @@ void case_data_wo_label_1(){
 // NOTE: Loading (4) and (5): CALL xt::random::seed and use SAME seed => same results.
 
 int main(int argc, char** argv) {
+    cout << 4 << endl;
+    dataloadertc4();
+    cout << 5 <<endl;
     dataloadertc5();
+    cout << 6 << endl;
+    dataloadertc6();
+    cout << 7 << endl;
+    dataloadertc7();
     cout << "Assignment-1" << endl;
     return 0;
 }
