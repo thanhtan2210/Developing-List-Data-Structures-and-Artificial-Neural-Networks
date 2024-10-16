@@ -1,15 +1,16 @@
 make.exe all -f d:\Bon Bon\project 1\git\Developing-List-Data-Structures-and-Artificial-Neural-Networks\make --print-data-base --no-builtin-variables --no-builtin-rules --question
-make: d:\Bon Bon\project 1\git\Developing-List-Data-Structures-and-Artificial-Neural-Networks\make: No such file or directory
-make: *** No rule to make target 'd:\Bon Bon\project 1\git\Developing-List-Data-Structures-and-Artificial-Neural-Networks\make'.  Stop.
-
 # GNU Make 4.4.1
 # Built for x86_64-pc-cygwin
 # Copyright (C) 1988-2023 Free Software Foundation, Inc.
 # License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
+ 
+make: d:\Bon Bon\project 1\git\Developing-List-Data-Structures-and-Artificial-Neural-Networks\make: No such file or directory
+make: *** No rule to make target 'd:\Bon Bon\project 1\git\Developing-List-Data-Structures-and-Artificial-Neural-Networks\make'.  Stop.
 
-# Make data base, printed on Sat Oct 12 15:08:36 2024
+
+# Make data base, printed on Wed Oct 16 16:40:07 2024
 
 # Variables
 
@@ -40,7 +41,7 @@ GOPATH = C:\Users\BonBon\go
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_20920_IZPBHSWENMEGPBMA
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_10448_KRVYUQIHIPFFSOSP
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
@@ -73,7 +74,9 @@ APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 VSCODE_L10N_BUNDLE_LOCATION = 
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
+ 
 # environment
+ 
 PROGRAMFILES = C:\Program Files
 # environment
 MFLAGS = -prR
@@ -88,7 +91,7 @@ MAKEFILE_LIST :=
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 20920
+VSCODE_PID = 10448
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # automatic
@@ -134,6 +137,8 @@ LOGONSERVER = \\LAPTOP-KD5384I4
 # environment
 USERNAME = BonBon
 # environment
+MINGW64_ROOT = C:\msys64\mingw64
+# environment
 COMMONPROGRAMFILES = C:\Program Files\Common Files
 # automatic
 ?F = $(notdir $?)
@@ -157,7 +162,10 @@ OS = Windows_NT
 .DEFAULT_GOAL := 
 # environment
 NVM_HOME = C:\Users\FX505\AppData\Roaming\nvm
+# environment
+MSYS2_ROOT = C:\msys64\usr
 # default
+ 
 MAKE_VERSION := 4.4.1
 # environment
 PROGRAMFILES(X86) = C:\Program Files (x86)
@@ -208,7 +216,7 @@ PROCESSOR_REVISION = 9e0a
 # environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 10, GenuineIntel
 # variable set hash-table stats:
-# Load=97/1024=9%, Rehash=0, Collisions=11/117=9%
+# Load=99/1024=10%, Rehash=0, Collisions=11/119=9%
 
 # Pattern-specific Variable Values
 
@@ -224,6 +232,7 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 10, GenuineIntel
 # No implicit rules.
 
 # Files
+ 
 
 # Not a target:
 .DEFAULT:
@@ -258,6 +267,6 @@ d:\Bon Bon\project 1\git\Developing-List-Data-Structures-and-Artificial-Neural-N
 # strcache performance: lookups = 8 / hit rate = 25%
 # hash-table stats:
 # Load=6/8192=0%, Rehash=0, Collisions=0/8=0%
-# Finished Make data base on Sat Oct 12 15:08:36 2024
+# Finished Make data base on Wed Oct 16 16:40:07 2024
 
  
